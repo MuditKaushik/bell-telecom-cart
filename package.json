@@ -1,0 +1,41 @@
+{
+  "name": "telecom-cart",
+  "version": "1.0.0",
+  "description": "bell assignmnet for thin salesforce cart api mimic ",
+  "keywords": [
+    "take-home-assignment-for-sse"
+  ],
+  "homepage": "https://github.com/MuditKaushik/bell-telecom-cart#readme",
+  "bugs": {
+    "url": "https://github.com/MuditKaushik/bell-telecom-cart/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MuditKaushik/bell-telecom-cart.git"
+  },
+  "license": "ISC",
+  "author": "Mudit Kaushik",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest && exit 1",
+    "clean-dist": "npx rimraf ./dist",
+    "build": "npm run clean-dist && npx tsc -p tsconfig.json",
+    "start": "npm run build && DEBUG=\"express:*\" npx node ./dist/server.js",
+    "serve": "npx node ./src/server.ts"
+  },
+  "devDependencies": {
+    "@jest/globals": "^30.2.0",
+    "@types/compression": "^1.8.1",
+    "@types/express": "^5.0.6",
+    "jest": "^30.2.0",
+    "node": "^24.12.0",
+    "rimraf": "^6.1.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "compression": "^1.8.1",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0"
+  }
+}
