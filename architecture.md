@@ -1,10 +1,10 @@
-1. Architectural Blueprint
-The Experience API sits between the Digital Channel (Web/Mobile) and the Salesforce System API.
+# Architectural Blueprint
+   The Experience API sits between the Digital Channel and the Salesforce System API.
 
-Key Components:
-State Management: Since Salesforce context is non-persistent, the xAPI should use a fast cache (like Redis) or the browser's LocalStorage to maintain the `cartId` or `quoteId`.
+# Key Components:
+  State Management: Since Salesforce context is non-persistent, the xAPI should use a fast cache (like Redis) or the browser's LocalStorage to maintain the `cartId`.
 
-2. Implementation Strategy
+# Implementation Strategy
   1. The Endpoint Design
      Keep the interface RESTful and resource-oriented.
 
