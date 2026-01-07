@@ -3,14 +3,6 @@ export const defalutCartExpireTimeInSeconds: number = 20;
 
 export class SFCartService {
   private cartMap = new Map<string, ICartModel>();
-  private static instance?: SFCartService | null;
-
-  static getInstance() {
-    if (!this.instance) {
-      this.instance = new SFCartService();
-    }
-    return this.instance;
-  }
 
   public addNewCart(expireTimeInSeconds: number = 0) {
     const newCartRefID = crypto.randomUUID();

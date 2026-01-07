@@ -2,7 +2,7 @@ import { Router } from 'express';
 import { SFCartService } from '../../services/salesforce.service.js';
 
 const cartHandler = Router(),
-  salesforceCart = SFCartService.getInstance();
+  salesforceCart = new SFCartService();
 
 cartHandler.get('/new', (req, res, next) => {
   const expireTime = parseInt(req.query['expirySeconds'] as string, 10),
