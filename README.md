@@ -6,6 +6,7 @@
 
 # Build Steps
 
+1. `npm install` - to install all the dependencies.
 1. `npm run build` - to build and transpile `TS` to `JS` in `dist` folder.
 2. `npm start` - to start the server at default port `:8080`.
 
