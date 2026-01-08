@@ -7,8 +7,9 @@
 # Build Steps
 
 1. `npm install` - to install all the dependencies.
-1. `npm run build` - to build and transpile `TS` to `JS` in `dist` folder.
-2. `npm start` - to start the server at default port `:8080`.
+2. `npm run build` - to build and transpile `TS` to `JS` in `dist` folder.
+3. `npm start` - to start the server at default port `:8080`.
+4. `npm test` - to test the Salesforce cart context unit tests.
 
 # Endpoint Details in `api.md`.
 
