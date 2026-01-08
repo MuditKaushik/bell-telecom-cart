@@ -1,5 +1,4 @@
-import { type ICartModel, type ICartItemType } from '../models/cart.js';
-export const defalutCartExpireTimeInSeconds: number = 20;
+import { type ICartModel, type ICartItemType } from '../models/cart';
 
 export class SFCartService {
   private cartMap = new Map<string, ICartModel>();
@@ -64,6 +63,7 @@ export class SFCartService {
     if (this.cartMap.has(cartId)) {
       this.cartMap.delete(cartId);
     }
+    return this.getCartById(cartId);
   }
 
   protected calculateTotal(cartItems?: Array<Partial<ICartItemType>>) {

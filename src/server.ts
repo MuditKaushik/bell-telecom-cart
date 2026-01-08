@@ -19,3 +19,5 @@ server.listen(PORT, (error) => {
     console.log(`server listening at ${PORT}`);
   }
 });
+
+export { server };

@@ -21,16 +21,18 @@
     "test": "npx jest && exit 1",
     "clean-dist": "npx rimraf ./dist",
     "build": "npm run clean-dist && npx tsc -p tsconfig.json",
-    "start": "npm run build && DEBUG=\"express:*\" npx node ./dist/server.js",
-    "serve": "npx node ./src/server.ts"
+    "start": "npm run build && DEBUG=\"express:*\" npx node ./dist/server.js"
   },
   "devDependencies": {
     "@jest/globals": "^30.2.0",
     "@types/compression": "^1.8.1",
     "@types/express": "^5.0.6",
+    "@types/node": "^25.0.3",
+    "@types/supertest": "^6.0.3",
     "jest": "^30.2.0",
-    "node": "^24.12.0",
     "rimraf": "^6.1.2",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   },
   "dependencies": {

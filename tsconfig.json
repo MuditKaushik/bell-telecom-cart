@@ -8,12 +8,12 @@
     "alwaysStrict": true,
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "node20",
-    "target": "esnext",
+    "module": "esnext",
+    "target": "es6",
     // "types": [],
     // For nodejs:
-    "lib": ["esnext"],
-    "types": ["node","express","compression"],
+    "lib": ["ESNext"],
+    "types": ["node","express","compression", "ts-node", "supertest"],
     // and npm install -D @types/node
 
     // Other Outputs
@@ -36,12 +36,23 @@
     // Recommended Options
     "strict": true,
     "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": false,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-    "moduleResolution": "nodenext"
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
   },
-  "exclude": ["/src/**/*.(spec|test).(j|t)s", "jest.*"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*.spec.js",
+    "**/*.test.js",
+  "jest.*"
+]
 }
